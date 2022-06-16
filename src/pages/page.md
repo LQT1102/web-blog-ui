@@ -1,0 +1,1 @@
+ex: post/PostListPage.tsx

@@ -1,0 +1,5 @@
+* {
+  box-sizing: "border-box";
+  font-family: "OpenSans";
+  transition: all 0.3ms;
+}
