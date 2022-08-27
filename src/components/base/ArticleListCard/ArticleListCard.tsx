@@ -1,8 +1,8 @@
 import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 import TitleOfList from "../TitleOfList/TitleOfList";
+import Link from "next/link";
 
 type Props = {
     articleList?: {
@@ -24,7 +24,7 @@ export default function ArticleListCard({ articleList }: Props) {
             <TitleOfList title="Latest posts" />
 
             {articleList?.map((item, index) => (
-                <Link to={"#"} key={index}>
+                <Link href={"#"} key={index}>
                     <Flex
                         align={"center"}
                         _hover={{

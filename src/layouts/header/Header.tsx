@@ -6,9 +6,10 @@ import {
     List,
     ListItem,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import Logo from "../../assets/images/logo.svg?component";
+// import { Link, NavLink } from "react-router-dom";
+import Logo from "../../../public/assets/images/logo.svg";
 import SearchBar from "../../components/base/SearchBar/SearchBar";
 
 type Props = {};
@@ -55,9 +56,9 @@ export default function Header({}: Props) {
             boxShadow={headerFixed ? "primary" : "none"}
             py={headerFixed ? 1 : 0}
         >
-            <Link to={"/"}>
-                <Logo />
-            </Link>
+            {/* <Link to={"/"}> */}
+            <Image src={Logo} />
+            {/* </Link> */}
             <List display={"flex"} gap={"8"}>
                 {menuItems.map((item, index) => (
                     <ListItem
@@ -68,7 +69,7 @@ export default function Header({}: Props) {
                         fontSize={"xl"}
                         color={"primary.100"}
                     >
-                        <NavLink to={item.to}>{item.title}</NavLink>
+                        {/* <NavLink to={item.to}>{item.title}</NavLink> */}
                     </ListItem>
                 ))}
             </List>

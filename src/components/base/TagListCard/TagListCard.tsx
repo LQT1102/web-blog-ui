@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-router-dom";
 import TitleOfList from "../TitleOfList/TitleOfList";
 
 type Props = {
@@ -20,7 +20,7 @@ export default function TagListCard({ tags }: Props) {
             <TitleOfList title="Tags" />
 
             {tags?.map((item, index) => (
-                <Link to={"#"} key={index}>
+                <Link href={"#"} key={index}>
                     <Box
                         key={index}
                         fontSize={"md"}

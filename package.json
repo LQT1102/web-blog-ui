@@ -1,42 +1,33 @@
 {
-    "name": "web-blog-ui",
     "private": true,
-    "version": "0.0.0",
     "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "preview": "vite preview"
+        "dev": "next",
+        "build": "next build",
+        "start": "next start"
     },
     "dependencies": {
         "@chakra-ui/icons": "^2.0.2",
-        "@chakra-ui/react": "^2.1.2",
+        "@chakra-ui/react": "^2.2.1",
+        "@chakra-ui/theme-tools": "^2.0.2",
         "@emotion/react": "^11.9.0",
-        "@emotion/styled": "^11.8.1",
+        "@emotion/styled": "^11.9.0",
         "@reduxjs/toolkit": "^1.8.2",
         "@xstate/react": "^3.0.0",
-        "framer-motion": "^6.3.10",
-        "i18next": "^21.8.8",
-        "i18next-browser-languagedetector": "^6.1.4",
-        "i18next-http-backend": "^1.4.1",
-        "react": "^18.0.0",
-        "react-dom": "^18.0.0",
-        "react-helmet": "^6.1.0",
-        "react-helmet-async": "^1.3.0",
-        "react-i18next": "^11.17.0",
-        "react-query": "^3.39.1",
+        "framer-motion": "^6.3.0",
+        "next": "latest",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-intl": "^6.0.5",
         "react-redux": "^8.0.2",
-        "react-router-dom": "^6.3.0",
-        "react-spring": "^9.4.5",
-        "react-tsparticles": "^2.0.6",
-        "tsparticles": "^2.0.6",
+        "react-spring": "^9.5.2",
+        "react-tsparticles": "^2.2.4",
+        "tsparticles": "^2.2.4",
         "xstate": "^4.32.1"
     },
     "devDependencies": {
-        "@honkhonk/vite-plugin-svgr": "^1.1.0",
+        "@types/node": "^18.0.0",
         "@types/react": "^18.0.0",
         "@types/react-dom": "^18.0.0",
-        "@vitejs/plugin-react": "^1.3.0",
-        "typescript": "^4.6.3",
-        "vite": "^2.9.9"
+        "typescript": "^4.7.2"
     }
 }

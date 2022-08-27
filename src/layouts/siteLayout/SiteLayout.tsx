@@ -1,22 +1,22 @@
 import { Box, Container, Flex } from "@chakra-ui/react";
 import { useEffect, useLayoutEffect } from "react";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
+// import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import AboutMeCard from "../../components/base/AboutMeCard/AboutMeCard";
 import ArticleListCard from "../../components/base/ArticleListCard/ArticleListCard";
 import Intro from "../../components/base/Intro/Intro";
 import TagListCard from "../../components/base/TagListCard/TagListCard";
+import { LayoutProps } from "../../types/common";
 import Footer from "../footer/Footer";
 import Header from "../header/Header";
 
-type Props = {};
+export default function SiteLayout({ children }: LayoutProps) {
+    // const location = useLocation();
+    // useLayoutEffect(() => {
+    //     document.documentElement.scrollTo(0, 0);
+    // }, [location.pathname]);
 
-export default function SiteLayout({}: Props) {
-    const location = useLocation();
-    useLayoutEffect(() => {
-        document.documentElement.scrollTo(0, 0);
-    }, [location.pathname]);
-
-    const isHomePage = location.pathname === "/";
+    // const isHomePage = location.pathname === "/";
+    const isHomePage = true;
 
     return (
         <Flex
@@ -54,7 +54,7 @@ export default function SiteLayout({}: Props) {
                                     direction={"column"}
                                     gap={6}
                                 >
-                                    <Outlet />
+                                    {children}
                                 </Flex>
                                 <Flex
                                     w={{ base: "full", md: "325px" }}

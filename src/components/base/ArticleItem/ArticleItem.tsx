@@ -1,5 +1,5 @@
 import { Badge, Box, Flex, Image, Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 type Props = {
     imageUrl: string;
@@ -8,7 +8,7 @@ type Props = {
 export default function ArticleItem({ imageUrl }: Props) {
     const breakpoint = "lg";
     return (
-        <Link to={"demo-detail"}>
+        <Link href={"articles/123"}>
             <Flex
                 boxShadow={"primary"}
                 borderRadius={8}
