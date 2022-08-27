@@ -1,4 +1,5 @@
-import { mode, PartsStyleFunction } from "@chakra-ui/theme-tools";
+import { PartsStyleFunction } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 
 function getDefaults(props: Record<string, any>) {
     const { focusBorderColor: fc, errorBorderColor: ec } = props

@@ -1,10 +1,12 @@
 import { Badge, Box, Flex, Heading } from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
-import { Link } from "react-router-dom";
+import SiteLayout from "../../layouts/siteLayout/SiteLayout";
+import { NextPageWithLayout } from "../../types/common";
 
 type Props = {};
 
-export default function ArticleDetail({}: Props) {
+const ArticleDetail: NextPageWithLayout = function ({}: Props) {
     return (
         <Flex w={"full"} direction={"column"}>
             <Flex w={"full"} direction={"column"} gap={3}>
@@ -12,12 +14,12 @@ export default function ArticleDetail({}: Props) {
                     The World’s Most Dangerous Technology Ever Made.
                 </Heading>
                 <Flex gap={1}>
-                    <Link to={"#"}>
+                    <Link href={"#"}>
                         <Badge colorScheme="gray" variant={"customOutline"}>
                             React
                         </Badge>
                     </Link>
-                    <Link to={"#"}>
+                    <Link href={"#"}>
                         <Badge colorScheme="gray" variant={"customOutline"}>
                             Javascript
                         </Badge>
@@ -45,4 +47,8 @@ export default function ArticleDetail({}: Props) {
             </Flex>
         </Flex>
     );
-}
+};
+
+ArticleDetail.Layout = SiteLayout;
+
+export default ArticleDetail;

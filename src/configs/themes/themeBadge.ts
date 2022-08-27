@@ -1,8 +1,5 @@
+import { SystemStyleFunction } from "@chakra-ui/react"
 import{ mode  } from "@chakra-ui/theme-tools"
-import type {
-    SystemStyleFunction,
-    SystemStyleObject,
-  } from "@chakra-ui/theme-tools"
 
 const variantcustomOutline: SystemStyleFunction = (props) => {
     const { colorScheme: c, theme } = props

@@ -7,6 +7,7 @@ import {
     ListItem,
 } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 // import { Link, NavLink } from "react-router-dom";
 import Logo from "../../../public/assets/images/logo.svg";
@@ -56,20 +57,21 @@ export default function Header({}: Props) {
             boxShadow={headerFixed ? "primary" : "none"}
             py={headerFixed ? 1 : 0}
         >
-            {/* <Link to={"/"}> */}
-            <Image src={Logo} />
-            {/* </Link> */}
+            <Link href={"/"}>
+                <Image src={Logo} />
+            </Link>
             <List display={"flex"} gap={"8"}>
                 {menuItems.map((item, index) => (
                     <ListItem
                         key={index}
                         _hover={{
-                            fontWeight: "bold",
+                            textDecoration: "underline",
+                            color: "primary.100",
                         }}
                         fontSize={"xl"}
-                        color={"primary.100"}
+                        color={"primary.200"}
                     >
-                        {/* <NavLink to={item.to}>{item.title}</NavLink> */}
+                        <Link href={item.to}>{item.title}</Link>
                     </ListItem>
                 ))}
             </List>

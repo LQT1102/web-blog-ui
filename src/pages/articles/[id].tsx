@@ -1,10 +1,12 @@
 import { Badge, Box, Flex, Heading } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
+import SiteLayout from "../../layouts/siteLayout/SiteLayout";
+import { NextPageWithLayout } from "../../types/common";
 
 type Props = {};
 
-export default function ArticleDetail({}: Props) {
+const ArticleDetail: NextPageWithLayout = function ArticleDetail({}: Props) {
     return (
         <Flex w={"full"} direction={"column"}>
             <Flex w={"full"} direction={"column"} gap={3}>
@@ -45,4 +47,8 @@ export default function ArticleDetail({}: Props) {
             </Flex>
         </Flex>
     );
-}
+};
+
+ArticleDetail.Layout = SiteLayout;
+
+export default ArticleDetail;
